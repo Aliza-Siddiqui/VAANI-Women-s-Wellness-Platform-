@@ -1,0 +1,218 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAANI - Women's Wellness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">💜 VAANI</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tracker">Period Tracker</a></li>
+        <li><a href="#chat">AI Chat</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1 class="hero-title">💜 VAANI</h1>
+    <p class="hero-subtitle">Your Safe Space for Health & Wellness</p>
+    
+    <div class="hero-features">
+      <div class="hero-feature">
+        <span class="hero-feature-icon">🌸</span>
+        <h3 class="hero-feature-title">Period Tracking</h3>
+        <p>Smart cycle predictions and insights</p>
+      </div>
+      <div class="hero-feature">
+        <span class="hero-feature-icon">🤖</span>
+        <h3 class="hero-feature-title">AI Wellness Chat</h3>
+        <p>24/7 personalized health guidance</p>
+      </div>
+      <div class="hero-feature">
+        <span class="hero-feature-icon">📚</span>
+        <h3 class="hero-feature-title">Educational Content</h3>
+        <p>Expert videos and resources</p>
+      </div>
+      <div class="hero-feature">
+        <span class="hero-feature-icon">👩‍⚕️</span>
+        <h3 class="hero-feature-title">Doctor Consultations</h3>
+        <p>Easy appointment booking</p>
+      </div>
+      <div class="hero-feature">
+        <span class="hero-feature-icon">🤝</span>
+        <h3 class="hero-feature-title">Safe Community</h3>
+        <p>Anonymous support network</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Period Tracker Section -->
+  <section id="tracker" class="section">
+    <div class="section-container">
+      <div class="section-content">
+        <h2 class="section-title">🌸 Period Tracker</h2>
+        <p class="section-subtitle">Track your cycle with intelligent predictions and personalized insights</p>
+        
+        <div class="period-form-container">
+          <div class="date-input-container">
+            <label class="date-label" for="start-date">When did your last period start?</label>
+            <input type="date" id="start-date" class="form-control" style="max-width: 300px;" />
+          </div>
+          
+          <button onclick="calculatePeriod()" class="btn btn-primary">Predict My Next Period</button>
+        </div>
+        
+        <!-- Hidden cycle length input - still functional but not displayed -->
+        <input type="number" id="cycle-length" value="28" style="display: none;" />
+        
+        <div id="prediction" class="tracker-results"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot Section -->
+  <section id="chat" class="section">
+    <div class="section-container">
+      <div class="section-content">
+        <h2 class="section-title">🤖 AI Wellness Chat</h2>
+        <p class="section-subtitle">Get personalized health guidance and support anytime you need it</p>
+        
+        <div class="chat-container">
+          <div id="chatbox"></div>
+          <div class="chat-input-container">
+            <input type="text" id="user-input" class="form-control" placeholder="Ask about your health concerns, period symptoms, mental wellness..." style="flex: 1;">
+            <button onclick="chatBotReply()" class="btn btn-secondary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos" class="section">
+    <div class="section-container">
+      <div class="section-content">
+        <h2 class="section-title">📚 Educational Videos</h2>
+        <p class="section-subtitle">Learn from expert content about women's health and wellness</p>
+        
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/vXrQ_FhZmos" allowfullscreen></iframe>
+            <div class="video-info">
+              <h3 class="video-title">Understanding Your Menstrual Cycle</h3>
+              <p class="video-description">A comprehensive guide to understanding the phases of your menstrual cycle and what's normal for your body.</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/EOToLgM8suU" allowfullscreen></iframe>
+            <div class="video-info">
+              <h3 class="video-title">Women's Mental Health & Wellness</h3>
+              <p class="video-description">Expert insights on maintaining mental wellness, managing stress, and building healthy coping strategies.</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Ub-g8xJQhqY?si=-evga0w1a7dC48Fi" allowfullscreen></iframe>
+            <div class="video-info">
+              <h3 class="video-title">PCOS Awareness & Management</h3>
+              <p class="video-description">Understanding PCOS symptoms, diagnosis, and effective management strategies for better hormonal health.</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/AEe1d7Dw_IA?si=Dc_QVybn-8WlAGQM" allowfullscreen></iframe>
+            <div class="video-info">
+              <h3 class="video-title">Female Hygiene</h3>
+              <p class="video-description">Here are some amazing tips to maintain vaginal hygiene.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctor Booking Section -->
+  <section id="booking" class="section">
+    <div class="section-container">
+      <div class="section-content">
+        <h2 class="section-title">👩‍⚕️ Doctor Consultation</h2>
+        <p class="section-subtitle">Book appointments with healthcare specialists who understand women's health</p>
+        
+        <form onsubmit="bookDoctor(event)" class="booking-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <input class="form-control" type="text" name="fullName" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="tel" name="phoneNumber" placeholder="Mobile Number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input class="form-control" type="text" name="healthConcern" placeholder="Health Concern (e.g., PCOS, Anxiety, General Checkup, Fertility)" required>
+          </div>
+          
+          <div class="form-group">
+            <input class="form-control" type="datetime-local" name="appointmentTime" required>
+          </div>
+          
+          <div class="booking-buttons">
+            <input type="hidden" name="current_period_date" id="current_period_date">
+<input type="hidden" name="predicted_period_date" id="predicted_period_date">
+
+            <button class="btn btn-success" type="submit" name="bookingType" value="regular">Book Regular Appointment</button>
+            <button class="btn btn-emergency" type="submit" name="bookingType" value="emergency">🚨 Emergency Booking</button>
+          </div>
+        </form>
+        
+        <div id="booking-message"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="section">
+    <div class="section-container">
+      <div class="section-content">
+        <h2 class="section-title">🤝 Safe Community</h2>
+        <p class="section-subtitle">Connect anonymously with others, share experiences, and find support</p>
+        
+        <div class="community-container">
+          <div class="post-form">
+            <div class="form-group">
+              <textarea class="form-control" id="anon-post" placeholder="Share your thoughts, experiences, questions, or offer support to others. This is a safe, anonymous space..." rows="4"></textarea>
+            </div>
+            <div style="text-align: center;">
+              <button class="btn btn-primary" onclick="postMessage()">Share Anonymously</button>
+            </div>
+          </div>
+          
+          <div id="community-feed" class="community-feed">
+            <!-- Sample posts will be added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
