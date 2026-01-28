@@ -53,7 +53,7 @@ VAANI is a **women’s wellness web application** designed as a safe space for h
 
 3. Start Apache (and MySQL if you plan to expand database support).  
 
-4. Open in browser(Adding this feature soon)
+4. Open in browser: (Adding this feature soon)
 
 
 ---
